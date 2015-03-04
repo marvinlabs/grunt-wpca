@@ -1,5 +1,6 @@
 {
     "name" : "customer-area-addon-1",
+    "productSlug": "wpca-addon1",
     "version" : "1.0.0",
     "description" : "WP Customer Area is a modular all-in-one solution to manage private content with WordPress.",
     "textDomain" : "wpcaa1",

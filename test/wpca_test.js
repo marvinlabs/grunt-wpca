@@ -20,6 +20,7 @@ exports.wpca = {
         var expected = [
             {
                 slug: "customer-area-addon-1",
+                productSlug: "wpca-addon1",
                 version: "1.0.0",
                 textDomain: "wpcaa1",
                 path: "tmp/fixtures/list_addons/customer-area-addon-1",
@@ -28,6 +29,7 @@ exports.wpca = {
             },
             {
                 slug: "customer-area-addon-2",
+                productSlug: "wpca-addon-2",
                 version: "2.0.0",
                 textDomain: "wpcaa2",
                 path: "tmp/fixtures/list_addons/customer-area-addon-2",
