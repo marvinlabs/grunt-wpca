@@ -3,7 +3,7 @@
 var grunt = require('grunt');
 var fs = require('fs');
 
-exports.sync_addon_libs = {
+exports['sync-cuar-commons'] = {
 
     setUp: function (done) {
         // setup here if necessary

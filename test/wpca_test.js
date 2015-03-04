@@ -24,7 +24,7 @@ exports.wpca = {
                 textDomain: "wpcaa1",
                 path: "tmp/fixtures/list_addons/customer-area-addon-1",
                 mainFile: "customer-area-addon-1.php",
-                langFolder: "tmp/fixtures/list_addons/customer-area-addon-1/languages"
+                langFolder: "languages"
             },
             {
                 slug: "customer-area-addon-2",
@@ -32,7 +32,7 @@ exports.wpca = {
                 textDomain: "wpcaa2",
                 path: "tmp/fixtures/list_addons/customer-area-addon-2",
                 mainFile: "customer-area-addon-2.php",
-                langFolder: "tmp/fixtures/list_addons/customer-area-addon-2/languages"
+                langFolder: "languages"
             }
         ];
         test.deepEqual(actual, expected, 'should properly find and describe addons');

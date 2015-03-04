@@ -20,14 +20,14 @@ Once the plugin has been installed, it may be enabled inside your Gruntfile with
 grunt.loadNpmTasks('grunt-wpca');
 ```
 
-## The "sync_addon_libs" task
+## The "sync-cuar-commons" task
 
 ### Overview
-In your project's Gruntfile, add a section named `sync_addon_libs` to the data object passed into `grunt.initConfig()`.
+In your project's Gruntfile, add a section named `sync-cuar-commons` to the data object passed into `grunt.initConfig()`.
 
 ```js
 grunt.initConfig({
-  sync_addon_libs: {
+  'sync-cuar-commons': {
     your_target: {
       // Target-specific file lists and/or options go here.
     },
@@ -37,50 +37,31 @@ grunt.initConfig({
 
 ### Options
 
-#### options.cwd
+#### options.base_path
 Type: `String`
 Default value: `''`
 
 The base directory where WP Customer Area and its addons are installed
 
 #### options.addons_pattern
-Type: `String`
+Type: `Array`
 Default value: `['customer-area-*']`
 
 A list of patterns to match an add-on's folder name
 
+#### options.shared_files
+Type: `Array`
+Default value: `['libs/cuar/**/*']`
+
+A list of patterns matching the files to be synchronized
+
 ### Usage Examples
 
-#### Default Options
-
-In this example, the default options are used to do something with whatever. So if the `testing` file has the content 
-`Testing` and the `123` file had the content `1 2 3`, the generated result would be `Testing, 1 2 3.`
-
 ```js
 grunt.initConfig({
-  sync_addon_libs: {
-    options: {},
-    files: {
-      'dest/default_options': ['src/testing', 'src/123'],
-    },
-  },
-})
-```
-
-#### Custom Options
-In this example, custom options are used to do something else with whatever else. So if the `testing` file has the 
-content `Testing` and the `123` file had the content `1 2 3`, the generated result in this case would be 
-`Testing: 1 2 3 !!!`
-
-```js
-grunt.initConfig({
-  sync_addon_libs: {
+  'sync-cuar-commons': {
     options: {
-      separator: ': ',
-      punctuation: ' !!!',
-    },
-    files: {
-      'dest/default_options': ['src/testing', 'src/123'],
+        base_path: 'wp-plugins'
     },
   },
 })

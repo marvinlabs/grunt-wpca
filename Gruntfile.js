@@ -42,7 +42,7 @@ module.exports = function (grunt) {
         },
 
         // Configuration to be run (and then tested).
-        sync_addon_libs: {
+        'sync-cuar-commons': {
             options: {
                 base_path: 'tmp/fixtures/default_options'
             },
@@ -62,7 +62,7 @@ module.exports = function (grunt) {
 
     // Whenever the "test" task is run, first clean the "tmp" dir, then run this
     // plugin's task(s), then test the result.
-    grunt.registerTask('test', ['clean', 'copy', 'sync_addon_libs:default_options', 'nodeunit']);
+    grunt.registerTask('test', ['clean', 'copy', 'sync-cuar-commons:default_options', 'nodeunit']);
 
     // By default, lint and run all tests.
     grunt.registerTask('default', ['jshint', 'test']);

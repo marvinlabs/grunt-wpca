@@ -15,7 +15,7 @@ module.exports = function (grunt) {
     var fs = require('fs');
     var chalk = require('chalk');
 
-    grunt.registerMultiTask('sync_addon_libs', 'Synchronize all shared files', function () {
+    grunt.registerMultiTask('sync-cuar-commons', 'Synchronize all shared files', function () {
 
         // Merge options with defaults
         var defaultOptions = {
