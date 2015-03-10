@@ -40,5 +40,32 @@ exports.wpca = {
         test.deepEqual(actual, expected, 'should properly find and describe addons');
 
         test.done();
+    },
+
+    listThemes: function (test) {
+        'use strict';
+
+        test.expect(1);
+
+        var actual = wpca.listThemes('tmp/fixtures/list_themes', ['wpca-*']);
+        var expected = [
+            {
+                slug: "wpca-theme-1",
+                version: "1.0.0",
+                textDomain: "wpcaa1",
+                path: "tmp/fixtures/list_themes/wpca-theme-1",
+                langFolder: "languages"
+            },
+            {
+                slug: "wpca-theme-2",
+                version: "2.0.0",
+                textDomain: "wpcat2",
+                path: "tmp/fixtures/list_themes/wpca-theme-2",
+                langFolder: "languages"
+            }
+        ];
+        test.deepEqual(actual, expected, 'should properly find and describe addons');
+
+        test.done();
     }
 };
