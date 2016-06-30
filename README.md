@@ -23,11 +23,17 @@ grunt.loadNpmTasks('grunt-wpca');
 ## The "sync-cuar-commons" task
 
 ### Overview
-In your project's Gruntfile, add a section named `sync-cuar-commons` to the data object passed into `grunt.initConfig()`.
+In your project's Gruntfile, add a section named `sync-cuar-commons` and `update-cuar-versions` to 
+the data object passed into `grunt.initConfig()`.
 
 ```js
 grunt.initConfig({
   'sync-cuar-commons': {
+    your_target: {
+      // Target-specific file lists and/or options go here.
+    },
+  },
+  'update-cuar-versions': {
     your_target: {
       // Target-specific file lists and/or options go here.
     },
@@ -60,6 +66,11 @@ A list of patterns matching the files to be synchronized
 ```js
 grunt.initConfig({
   'sync-cuar-commons': {
+    options: {
+        base_path: 'wp-plugins'
+    },
+  },
+  'update-cuar-versions': {
     options: {
         base_path: 'wp-plugins'
     },
