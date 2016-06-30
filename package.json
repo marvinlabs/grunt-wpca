@@ -1,6 +1,6 @@
 {
     "name" : "grunt-wpca",
-    "version" : "0.6.0",
+    "version" : "0.6.1",
     "description" : "Grunt plugin to ease Customer Area development",
     "homepage" : "http://wp-customerarea.com",
     "repository" : "git@github.com:marvinlabs/grunt-wpca.git",
